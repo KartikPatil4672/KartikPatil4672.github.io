@@ -64,10 +64,12 @@ h1{margin:6px 0 10px;font-family:var(--display);font-weight:800;font-size:clamp(
 
 /* floating code card */
 .float{justify-self:end;width:100%;max-width:380px;border-radius:16px;background:var(--bg2);border:1px solid var(--line);box-shadow:0 30px 60px -25px rgba(0,0,0,.55),0 0 0 6px var(--card);animation:bob 6s ease-in-out infinite}
-.dots{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
-.dots i{width:10px;height:10px;border-radius:50%;background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
-.float pre{margin:0;padding:18px;font:500 .85rem/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:hidden;color:var(--text)}
-.k{color:var(--a3)}.f{color:var(--a1)}.s{color:var(--a2)}
+.float{padding:24px}
+.info{margin:0;display:grid;gap:18px}
+.info div{padding-left:16px;border-left:3px solid var(--a1)}
+.info div:nth-child(2){border-color:var(--a2)}.info div:nth-child(3){border-color:var(--a3)}
+.info dt{font-size:.85rem;color:var(--muted)}
+.info dd{margin:0;font-family:var(--display);font-weight:600;font-size:1.1rem}
 
 /* sections */
 .block{padding:84px 0 8px}
@@ -153,13 +155,11 @@ footer{margin-top:84px;border-top:1px solid var(--line);color:var(--muted);font-
           <a class="btn" href="#contact">Contact me</a>
         </div>
       </div>
-      <div class="float" aria-hidden="true">
-        <div class="dots"><i></i><i></i><i></i></div>
-<pre><span class="k">class</span> <span class="f">Kartik</span>:
-  studying = <span class="s">"AI &amp; Data Science"</span>
-  college  = <span class="s">"NMIET, Pune"</span>
-  builds   = [<span class="s">"ML"</span>, <span class="s">"IoT"</span>, <span class="s">"Web"</span>]
-  learning = <span class="s">"Cloud"</span></pre>
+      <div class="float">
+        <dl class="info">
+          <div><dt>College</dt><dd>NMIET, Pune</dd></div>
+          <div><dt>Studying</dt><dd>AI &amp; Data Science</dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -194,25 +194,25 @@ footer{margin-top:84px;border-top:1px solid var(--line);color:var(--muted);font-
 
   <section id="projects" class="wrap block">
     <h2 class="rv">Projects</h2>
-    <p class="sub rv">Things I have built and deployed.</p>
+    <p class="sub rv">Selected projects from my GitHub.</p>
     <div class="grid rv">
       <article class="card proj tilt">
-        <h3>Smart Solar Panel Monitoring</h3>
-        <p>IoT-based system that monitors solar panel performance using an ESP32 and sensors.</p>
-        <div class="tags"><span>ESP32</span><span>IoT</span><span>Sensors</span></div>
-        <a href="https://github.com/KartikPatil4672">View on GitHub</a>
+        <h3>LearnMate AI</h3>
+        <p>An AI-powered learning assistant project.</p>
+        <div class="tags"><span>AI</span></div>
+        <a href="https://github.com/KartikPatil4672/LearnMate-AI">View on GitHub</a>
       </article>
       <article class="card proj tilt">
-        <h3>Email Spam Detection</h3>
-        <p>Machine learning model that classifies spam and ham emails using NLP techniques.</p>
-        <div class="tags"><span>Python</span><span>NLP</span><span>ML</span></div>
-        <a href="https://github.com/KartikPatil4672">View on GitHub</a>
+        <h3>Multilingual Language Model</h3>
+        <p>A language model project that works across multiple languages.</p>
+        <div class="tags"><span>NLP</span><span>Language model</span></div>
+        <a href="https://github.com/KartikPatil4672/Multilingual_Language_Model">View on GitHub</a>
       </article>
       <article class="card proj tilt">
-        <h3>Portfolio Website</h3>
-        <p>This site, hosted as static files with a global CDN and automatic HTTPS.</p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div>
-        <a href="https://github.com/KartikPatil4672/KartikPatil4672.github.io">View source</a>
+        <h3>Leaf Scan AI</h3>
+        <p>An AI project for scanning and analysing leaf images.</p>
+        <div class="tags"><span>AI</span><span>Image analysis</span></div>
+        <a href="https://github.com/KartikPatil4672/Leaf_Scan_AI">View on GitHub</a>
       </article>
     </div>
   </section>
