@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kartik Patil | AI &amp; Data Science Portfolio</title>
-<meta name="description" content="Kartik Patil, third-year AI & Data Science engineering Student at NMIET, Pune. Projects in machine learning, NLP and AI.">
-<link rel="icon" href="profile.jpg">
+<meta name="description" content="Kartik Patil, third-year AI & Data Science engineering student at NMIET, Pune. Projects in machine learning, NLP and explainable AI.">
+<link rel="icon" href="images/profile.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script>
 (function(){var t;try{t=localStorage.getItem('theme')}catch(e){}
 if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
@@ -16,173 +16,129 @@ document.documentElement.dataset.theme=t})();
 </script>
 <style>
 :root{
-  --bg:#060c20;--text:#eaf0ff;--muted:#a9b6da;
-  --glass:rgba(255,255,255,.07);--glass2:rgba(255,255,255,.11);--gline:rgba(255,255,255,.15);--hl:rgba(255,255,255,.12);
-  --shadow:0 12px 40px rgba(0,0,0,.32);
-  --accent:#6ea2ff;--ink:#06122e;--orb:.55;
-  --m150:150ms;--m200:200ms;--m300:300ms;--out:cubic-bezier(.16,1,.3,1);--in:cubic-bezier(.7,0,.84,0);
-  --display:"Sora","Segoe UI",system-ui,sans-serif;--body:"Manrope","Segoe UI",system-ui,sans-serif;
+  --bg:#0d1311;--panel:#141c19;--line:#25322d;--text:#eef3ee;--muted:#9fb0a7;--accent:#8fe3ae;--ink:#0a1410;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --out:cubic-bezier(.16,1,.3,1);
 }
-[data-theme="light"]{
-  --bg:#e9efff;--text:#0e1a3d;--muted:#46557f;
-  --glass:rgba(255,255,255,.55);--glass2:rgba(255,255,255,.8);--gline:rgba(14,26,61,.12);--hl:rgba(255,255,255,.95);
-  --shadow:0 10px 32px rgba(40,70,160,.07);
-  --accent:#2a5bdc;--ink:#ffffff;--orb:.4;
-}
+[data-theme="light"]{--bg:#f2f5ee;--panel:#fff;--line:#d8e0d6;--text:#101a14;--muted:#52645a;--accent:#176a45;--ink:#fff}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;font-family:var(--body);font-size:1rem;font-weight:400;line-height:1.6;background:var(--bg);color:var(--text);overflow-x:hidden}
-a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:10px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0}
-.glass{background:var(--glass);border:1px solid var(--gline);border-radius:20px;backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:inset 0 1px 0 var(--hl),var(--shadow)}
-
-/* living background */
-.scene{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:var(--orb);will-change:transform}
-.o1{width:46vmax;height:46vmax;left:-12vmax;top:-10vmax;background:#2f5bff;animation:d1 28s ease-in-out infinite}
-.o2{width:38vmax;height:38vmax;right:-10vmax;top:18vh;background:#5aa0ff;animation:d2 34s ease-in-out infinite}
-.o3{width:34vmax;height:34vmax;left:20vw;bottom:-16vmax;background:#4a3cff;animation:d3 30s ease-in-out infinite}
-.shard{position:absolute;border:1px solid var(--gline);background:var(--glass);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 var(--hl);will-change:transform;animation:fl var(--t,24s) ease-in-out infinite;animation-delay:var(--d,0s)}
-.s1{width:90px;height:90px;border-radius:26px;left:8%;top:22%;--t:22s}
-.s2{width:56px;height:56px;border-radius:50%;left:46%;top:12%;--t:26s;--d:-6s}
-.s3{width:120px;height:120px;border-radius:34px;right:7%;top:56%;--t:30s;--d:-10s}
-.s4{width:70px;height:70px;border-radius:20px;left:14%;top:70%;--t:25s;--d:-3s}
-.s5{width:44px;height:44px;border-radius:50%;right:24%;top:80%;--t:21s;--d:-8s}
-.s6{width:100px;height:100px;border-radius:50%;left:62%;top:34%;--t:32s;--d:-14s}
-@keyframes d1{50%{transform:translate3d(9vw,8vh,0) scale(1.1)}}
-@keyframes d2{50%{transform:translate3d(-10vw,-6vh,0) scale(1.12)}}
-@keyframes d3{50%{transform:translate3d(8vw,-9vh,0) scale(1.08)}}
-@keyframes fl{0%,100%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(18px,-34px,0) rotate(24deg)}}
-
-.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:40;background:var(--accent);transform:scaleX(0);transform-origin:0 50%}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;font-family:var(--body);line-height:1.6;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.02;letter-spacing:-.025em}
+h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:32px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:24px}
 
 /* nav */
-.nav{position:sticky;top:12px;z-index:30;margin:12px auto 0;max-width:1080px;width:calc(100% - 24px)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 12px 0 16px;border-radius:999px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-family:var(--display);font-weight:600}
-.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:center 20%;border:1px solid var(--gline)}
-#menu{display:flex;gap:4px}
-#menu a{padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:500;font-size:.875rem;transition:color var(--m150) var(--out),background var(--m150) var(--out)}
-#menu a:hover{color:var(--text)}
-#menu a.on{color:var(--text);background:var(--glass2);box-shadow:inset 0 0 0 1px var(--gline)}
-.tools{display:flex;gap:8px}
-
-/* icon buttons with tooltips */
-.ibw{position:relative;display:inline-flex}
-.ib{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border-radius:50%;border:1px solid var(--gline);background:var(--glass);color:var(--text);cursor:pointer;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 var(--hl);transition:background var(--m150) var(--out),transform var(--m150) var(--out)}
-.ib:hover{background:var(--glass2);transform:translateY(-2px)}
-.ib svg{width:20px;height:20px;fill:currentColor}
-.ib .stroke{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.tip{position:absolute;top:calc(100% + 8px);left:50%;transform:translate(-50%,-4px);padding:6px 12px;border-radius:10px;font-size:.75rem;line-height:1.4;white-space:nowrap;color:var(--text);background:var(--bg);border:1px solid var(--gline);opacity:0;visibility:hidden;pointer-events:none;transition:opacity var(--m150) var(--out),transform var(--m150) var(--out),visibility 0s var(--m150);z-index:50}
-.ibw:hover .tip,.ibw:focus-within .tip{opacity:1;visibility:visible;transform:translate(-50%,0);transition-delay:0s}
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:1.1rem}
+.brand img{width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:center 20%}
+.links{display:flex;gap:6px;align-items:center}
+.links a{padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:.9375rem;font-weight:500;transition:color .15s,background .15s}
+.links a:hover,.links a.on{color:var(--text);background:var(--panel)}
+.links .pill{background:var(--accent);color:var(--ink);font-weight:600}
+.links .pill:hover{background:var(--accent);color:var(--ink);opacity:.9}
+.ib{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;margin-left:6px}
+.ib svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .sun{display:none}[data-theme="dark"] .sun{display:block}[data-theme="dark"] .moon{display:none}
-#burger{display:none}
 
 /* hero */
-.hero{padding:72px 0 56px;min-height:calc(100vh - 80px);display:flex;align-items:center}
-.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.hello{margin:0 0 6px;color:var(--muted)}
-h1{font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:-.02em;margin-bottom:10px}
-.role{margin:0 0 16px;min-height:1.6em;font-family:var(--display);font-weight:500;font-size:clamp(1.1rem,2.4vw,1.45rem);color:var(--accent)}
-.caret{display:inline-block;width:2px;height:1.1em;margin-left:3px;vertical-align:-.15em;background:var(--accent);animation:blink 1s steps(2) infinite}
-.lead{max-width:52ch;color:var(--muted);margin:0 0 26px}
-.btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 24px;border-radius:999px;font-weight:500;text-decoration:none;color:var(--text);border:1px solid var(--gline);background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 var(--hl);transition:transform var(--m150) var(--out),background var(--m150) var(--out)}
-.btn:hover{background:var(--glass2);transform:translateY(-2px)}
+.hero{padding:64px 0 40px}
+.hero-in{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,10.5vw,7.6rem);font-weight:800}
+.hero .role{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,2.4vw,1.6rem);color:var(--accent);margin:18px 0 18px}
+.lead{max-width:50ch;color:var(--muted);font-size:1.0625rem;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--panel);transition:transform .15s var(--out),border-color .15s}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
 .btn.primary{background:var(--accent);color:var(--ink);border-color:transparent}
-.btn.primary:hover{background:var(--accent);opacity:.92}
-.quick{display:flex;gap:10px;margin-top:22px}
-.portrait{position:relative;justify-self:center;width:min(380px,100%)}
-.frame{padding:12px;border-radius:32px}
-.frame img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%;border-radius:22px}
-.chip{position:absolute;padding:8px 16px;border-radius:999px;font-size:.875rem;font-weight:500;animation:bob var(--t,7s) ease-in-out infinite;animation-delay:var(--d,0s);will-change:transform}
-.c1{left:-34px;top:12%;--t:6s}.c2{right:-26px;top:28%;--t:7.5s;--d:-2s}.c3{left:-22px;bottom:26%;--t:8s;--d:-4s}.c4{right:-30px;bottom:10%;--t:6.5s;--d:-1s}.c5{left:30%;bottom:-18px;--t:7s;--d:-3s}
-@keyframes bob{50%{transform:translate3d(0,-14px,0)}}
-@keyframes blink{50%{opacity:0}}
+.cam{position:relative;border-radius:32px;overflow:hidden;border:1px solid var(--line);touch-action:pan-y;--x:50%;--y:40%}
+.cam img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%}
+.cam::after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .3s;pointer-events:none;mix-blend-mode:hard-light;
+  background:radial-gradient(circle at var(--x) var(--y),#ff2a00 0,#ffb800 11%,#3ddc84 24%,#2a6cff 40%,transparent 60%)}
+.cam:hover::after,.cam.on::after{opacity:.75}
+.cap{position:absolute;left:14px;bottom:14px;padding:6px 14px;border-radius:999px;font-size:.8125rem;font-weight:500;background:var(--bg);border:1px solid var(--line)}
 
-/* sections */
-.block{padding:84px 0 0}
-h2{font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.01em;margin-bottom:10px}
-.sub{margin:0 0 28px;color:var(--muted);max-width:56ch}
-.panel{padding:30px}
-.two{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:stretch}
-.two p{margin:0 0 14px;max-width:62ch}.two p:last-child{margin:0}
-.facts{display:grid;grid-template-columns:auto 1fr;gap:14px 18px;margin:0;font-size:.875rem}
-.facts dt{font-weight:600}.facts dd{margin:0;color:var(--muted)}
-.facts a{color:var(--accent);text-decoration:none}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.card{padding:24px;transition:transform var(--m150) var(--out),border-color var(--m150) var(--out)}
-.card h3{font-size:1.1rem;margin-bottom:12px}
-.chips,.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.chips li,.tags span{padding:5px 14px;border-radius:999px;font-size:.875rem;color:var(--text);background:var(--glass);border:1px solid var(--gline)}
-.rows{list-style:none;margin:0;padding:0}
-.rows li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--gline)}
-.rows li:first-child{border-top:0;padding-top:0}
-.rows span{color:var(--muted);font-size:.875rem;text-align:right}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-.proj{display:flex;flex-direction:column;gap:12px;will-change:transform}
-.proj:hover{border-color:var(--accent)}
-.proj p{margin:0;color:var(--muted);font-size:.9375rem}
-.proj .tags span{font-size:.875rem}
-.proj>a{margin-top:auto;font-weight:500;text-decoration:none}
-.proj>a:hover{text-decoration:underline}
-.cta{text-align:center;padding:52px 22px}
-.cta p{margin:0 auto 26px;max-width:48ch;color:var(--muted)}
+/* marquee */
+.band{border-block:1px solid var(--line);overflow:hidden;margin-top:40px}
+.track{display:flex;gap:40px;width:max-content;padding:16px 0;animation:slide 38s linear infinite;font-family:var(--display);font-weight:700;font-size:1.4rem;color:var(--muted)}
+.track span{white-space:nowrap}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section.block{padding:96px 0 0}
+
+/* about bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.b{padding:28px}
+.b.story{grid-column:span 4}.b.stat{grid-column:span 2}.b.facts{grid-column:span 6}
+.b p{margin:0 0 14px;max-width:62ch;color:var(--muted)}.b p:last-child{margin:0}
+.b p:first-child{color:var(--text);font-size:1.125rem}
+.num{font-family:var(--display);font-weight:800;font-size:3.4rem;line-height:1;color:var(--accent);margin-bottom:8px}
+.stat span{color:var(--muted)}
+.facts dl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 28px;margin:0}
+.facts dt{font-weight:600;font-size:.875rem;color:var(--muted)}.facts dd{margin:2px 0 0}
+.facts a{text-decoration:none}.facts a:hover{color:var(--accent)}
+
+/* skills */
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.sk .box{padding:26px}
+.sk h3{font-size:1.25rem;margin-bottom:14px}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{padding:6px 14px;border-radius:999px;border:1px solid var(--line);font-size:.9375rem}
+
+/* projects */
+.list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1.1fr 1.4fr auto;gap:12px 32px;align-items:center;padding:30px 12px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,padding .25s var(--out)}
+.row:hover{background:var(--panel);padding-left:24px}
+.row h3{font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:700}
+.row p{margin:0 0 10px;color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{padding:3px 12px;border-radius:999px;border:1px solid var(--line);font-size:.8125rem}
+.go{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--ink);transition:transform .25s var(--out)}
+.go svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.row:hover .go{transform:rotate(-45deg)}
+
+/* contact */
+.cta{padding:clamp(32px,6vw,72px);text-align:center;background:var(--accent);color:var(--ink);border-radius:32px}
+.cta h2{margin-bottom:14px}
+.cta p{margin:0 auto 28px;max-width:46ch;opacity:.85}
 .cta .btns{justify-content:center}
-footer{margin:84px auto 24px;max-width:1080px;width:calc(100% - 24px)}
-.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:18px 26px;border-radius:999px;color:var(--muted);font-size:.875rem}
+.cta .btn{background:transparent;color:var(--ink);border-color:color-mix(in srgb,var(--ink) 35%,transparent)}
+.cta .btn.dark{background:var(--ink);color:var(--accent);border-color:var(--ink)}
+footer{padding:48px 0 32px;color:var(--muted);font-size:.875rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
-/* scroll reveal: small, quick, staggered at most 30ms per item */
-.js .rv{opacity:0;transform:translateY(8px);transition:opacity var(--m300) var(--out),transform var(--m300) var(--out);transition-delay:calc(var(--i,0)*30ms)}
-.js .rv.in{opacity:1;transform:none}
+/* one page-load sequence */
+.js .in{opacity:0;transform:translateY(14px);animation:up .7s var(--out) forwards;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes up{to{opacity:1;transform:none}}
 
 @media (max-width:860px){
-  .hero-in,.two{grid-template-columns:1fr}
-  .portrait{order:-1;width:min(300px,86%)}
-  .hero{padding-top:36px}
-  #burger{display:inline-flex}
-  #menu{position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;padding:12px;border-radius:20px;background:var(--bg);border:1px solid var(--gline);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity var(--m150) var(--in),transform var(--m150) var(--in),visibility 0s var(--m150)}
-  .open #menu{opacity:1;visibility:visible;transform:none;transition:opacity var(--m200) var(--out),transform var(--m200) var(--out),visibility 0s}
-  .chip{display:none}.c1,.c2{display:block}
-  .foot{border-radius:24px}
+  .hero-in{grid-template-columns:1fr}.cam{max-width:340px}
+  .links a:not(.pill){display:none}
+  .b.story,.b.stat{grid-column:span 6}.facts dl{grid-template-columns:1fr 1fr}
+  .row{grid-template-columns:1fr auto}.row .d{grid-column:1/-1;grid-row:2}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{animation:none!important;transition:none!important}
-  .js .rv{opacity:1;transform:none}
+  .js .in{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
-<div class="scene" aria-hidden="true">
-  <i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
-  <i class="shard s1"></i><i class="shard s2"></i><i class="shard s3"></i><i class="shard s4"></i><i class="shard s5"></i><i class="shard s6"></i>
-</div>
-<div class="progress" id="bar"></div>
-
-<header class="nav" id="nav">
-  <div class="glass nav-in">
-    <a class="brand" href="#home"><img src="profile.jpg" alt="">Kartik Patil</a>
-    <nav id="menu" aria-label="Main">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#home"><img src="images/profile.jpg" alt="">Kartik Patil</a>
+    <nav class="links" aria-label="Main">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a class="pill" href="#contact">Contact</a>
+      <button class="ib" id="theme" type="button" aria-label="Switch to light theme">
+        <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+      </button>
     </nav>
-    <div class="tools">
-      <span class="ibw">
-        <button class="ib" id="theme" type="button" aria-label="Switch to light theme" aria-describedby="tip-theme">
-          <svg class="sun stroke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          <svg class="moon stroke" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
-        </button>
-        <span class="tip" id="tip-theme" role="tooltip">Switch to light theme</span>
-      </span>
-      <span class="ibw">
-        <button class="ib" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-describedby="tip-menu">
-          <svg class="stroke" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-        <span class="tip" id="tip-menu" role="tooltip">Open menu</span>
-      </span>
-    </div>
   </div>
 </header>
 
@@ -190,97 +146,93 @@ footer{margin:84px auto 24px;max-width:1080px;width:calc(100% - 24px)}
   <section id="home" class="hero">
     <div class="wrap hero-in">
       <div>
-        <p class="hello rv">Hello, I'm</p>
-        <h1 class="rv" style="--i:1">Kartik Patil</h1>
-        <p class="role rv" style="--i:2"><span id="type"></span><i class="caret"></i></p>
-        <p class="lead rv" style="--i:3">Third-year AI &amp; Data Science engineering Student at NMIET, Pune. I build projects in machine learning, NLP and computer vision, and I care about turning them into tools people can actually use.</p>
-        <div class="btns rv" style="--i:4">
+        <h1 class="in">Kartik<br>Patil</h1>
+        <p class="role in" style="--i:1">AI &amp; Data Science student building explainable AI</p>
+        <p class="lead in" style="--i:2">Third-year engineering student at NMIET, Pune. I build projects in machine learning, NLP and computer vision, and I want each one to show why it made its prediction.</p>
+        <div class="btns in" style="--i:3">
           <a class="btn primary" href="resume.pdf" download>Download resume</a>
           <a class="btn" href="#projects">View projects</a>
-        </div>
-        <div class="quick rv" style="--i:5">
-          <span class="ibw"><a class="ib" href="https://github.com/KartikPatil4672" aria-label="Open GitHub profile" aria-describedby="t-gh"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><span class="tip" id="t-gh" role="tooltip">Open GitHub profile</span></span>
-          <span class="ibw"><a class="ib" href="mailto:kartik212007@gmail.com" aria-label="Send an email" aria-describedby="t-ml"><svg class="stroke" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></a><span class="tip" id="t-ml" role="tooltip">Send an email</span></span>
-          <span class="ibw"><a class="ib" href="tel:+919767861955" aria-label="Call Kartik" aria-describedby="t-ph"><svg class="stroke" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></a><span class="tip" id="t-ph" role="tooltip">Call Kartik</span></span>
+          <a class="btn" href="https://github.com/KartikPatil4672">GitHub</a>
         </div>
       </div>
-      <div class="portrait rv" style="--i:2">
-        <div class="glass frame"><img src="profile.jpg" width="640" height="640" alt="Portrait of Kartik Patil in a navy suit and glasses"></div>
-        <span class="glass chip c1">Python</span><span class="glass chip c2">Machine Learning</span><span class="glass chip c3">NLP</span><span class="glass chip c4">SQL</span><span class="glass chip c5">Java</span>
+      <div class="cam in" id="cam" style="--i:2">
+        <img src="images/profile.jpg" width="640" height="800" alt="Portrait of Kartik Patil in a navy suit and glasses">
+        <span class="cap">Grad-CAM view: move over the photo</span>
+      </div>
+    </div>
+    <div class="band" aria-hidden="true">
+      <div class="track">
+        <span>Python</span><span>TensorFlow</span><span>Keras</span><span>PyTorch</span><span>OpenCV</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>FastAPI</span><span>Streamlit</span><span>SQL</span><span>MongoDB</span>
+        <span>Python</span><span>TensorFlow</span><span>Keras</span><span>PyTorch</span><span>OpenCV</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>FastAPI</span><span>Streamlit</span><span>SQL</span><span>MongoDB</span>
       </div>
     </div>
   </section>
 
   <section id="about" class="wrap block">
-    <h2 class="rv">About me</h2>
-    <div class="two rv">
-      <div class="glass panel">
-        <p>I am a third-year Engineering student at NMIET, Pune, specializing in Artificial Intelligence and Data Science. I enjoy solving practical problems with AI, from scanning leaf images to building learning tools that adapt to the student.</p>
-        <p>I program in Python, Java, C and C++, work with SQL and MongoDB databases, and have completed courses in machine learning, natural language processing and artificial intelligence. This portfolio is hosted as a static site on GitHub Pages, built for my Cloud Computing mini project.</p>
+    <h2>About me</h2>
+    <div class="bento">
+      <div class="box b story">
+        <p>I am a third-year Engineering student at NMIET, Pune, specializing in Artificial Intelligence and Data Science. I like solving practical problems with AI, from scanning leaf images to building learning tools that adapt to the student.</p>
+        <p>I program in Python, Java, C and C++, work with SQL and MongoDB, and have completed courses in machine learning, natural language processing and artificial intelligence. This portfolio is a static site on GitHub Pages, built for my Cloud Computing mini project.</p>
       </div>
-      <div class="glass panel">
-        <dl class="facts">
-          <dt>College</dt><dd>NMIET, Talegaon-Dabhade, Pune</dd>
-          <dt>Course</dt><dd>B.E. AI &amp; Data Science, third year</dd>
-          <dt>University</dt><dd>Savitribai Phule Pune University</dd>
-          <dt>Location</dt><dd>Pune, India</dd>
-          <dt>Phone</dt><dd><a href="tel:+919767861955">+91 97678 61955</a></dd>
-          <dt>Email</dt><dd><a href="mailto:kartik212007@gmail.com">kartik212007@gmail.com</a></dd>
+      <div class="box b stat"><div class="num">4</div><span>AI projects on GitHub, from plant disease detection to a multilingual language model.</span></div>
+      <div class="box b facts">
+        <dl>
+          <div><dt>College</dt><dd>NMIET, Talegaon-Dabhade, Pune</dd></div>
+          <div><dt>Course</dt><dd>B.E. AI &amp; Data Science, third year</dd></div>
+          <div><dt>University</dt><dd>Savitribai Phule Pune University</dd></div>
+          <div><dt>Location</dt><dd>Pune, India</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+919767861955">+91 97678 61955</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:kartik212007@gmail.com">kartik212007@gmail.com</a></dd></div>
         </dl>
       </div>
     </div>
   </section>
 
   <section id="skills" class="wrap block">
-    <h2 class="rv">Skills and learning</h2>
-    <p class="sub rv">What I code in, the data tools I use, and the courses I have completed.</p>
-    <div class="cols rv">
-      <div class="glass card"><h3>Programming</h3><ul class="chips"><li>HTML</li><li>C</li><li>C++</li><li>Java</li><li>Python</li></ul></div>
-      <div class="glass card"><h3>Databases</h3><ul class="chips"><li>SQL</li><li>MongoDB</li></ul></div>
-      <div class="glass card"><h3>Completed courses</h3>
-        <ul class="rows"><li>Machine Learning<span>Course</span></li><li>Natural Language Processing<span>Course</span></li><li>Artificial Intelligence<span>Course</span></li></ul>
-      </div>
+    <h2>Skills and learning</h2>
+    <div class="sk">
+      <div class="box"><h3>Programming</h3><ul class="chips"><li>Python</li><li>Java</li><li>C</li><li>C++</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
+      <div class="box"><h3>AI and machine learning</h3><ul class="chips"><li>TensorFlow</li><li>Keras</li><li>PyTorch</li><li>OpenCV</li><li>Scikit-learn</li><li>CNN</li><li>Transfer learning</li><li>Grad-CAM</li></ul></div>
+      <div class="box"><h3>Data and databases</h3><ul class="chips"><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>SQL</li><li>MongoDB</li></ul></div>
+      <div class="box"><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>VS Code</li><li>PyCharm</li><li>FastAPI</li><li>Streamlit</li><li>Arduino</li></ul></div>
+      <div class="box"><h3>Completed courses</h3><ul class="chips"><li>Machine Learning</li><li>Natural Language Processing</li><li>Artificial Intelligence</li></ul></div>
     </div>
   </section>
 
   <section id="projects" class="wrap block">
-    <h2 class="rv">Projects</h2>
-    <p class="sub rv">AI projects I have built. Each one is on my GitHub.</p>
-    <div class="grid rv">
-      <article class="glass card proj tilt">
+    <h2>Projects</h2>
+    <div class="list">
+      <a class="row" href="https://github.com/KartikPatil4672/Leaf_Scan_AI">
         <h3>Leaf Scan AI</h3>
-        <p>An AI project that scans leaf images and analyses them with a trained model.</p>
-        <div class="tags"><span>AI</span><span>Image analysis</span></div>
-        <a href="https://github.com/KartikPatil4672/Leaf_Scan_AI">View on GitHub</a>
-      </article>
-      <article class="glass card proj tilt">
+        <div class="d"><p>Scans leaf images and detects plant disease with a trained deep learning model.</p><div class="tags"><span>Computer vision</span><span>MobileNetV2</span><span>Keras</span></div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="row" href="https://github.com/KartikPatil4672">
         <h3>Leaf Scan AI, version 2</h3>
-        <p>The second version of Leaf Scan AI, building on the first release with improvements.</p>
-        <div class="tags"><span>AI</span><span>Version 2</span></div>
-        <a href="https://github.com/KartikPatil4672">View on GitHub</a>
-      </article>
-      <article class="glass card proj tilt">
+        <div class="d"><p>A fine-tuned model with a web interface and Grad-CAM heatmaps that show which part of the leaf drove each prediction.</p><div class="tags"><span>Explainable AI</span><span>Grad-CAM</span><span>FastAPI</span></div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="row" href="https://github.com/KartikPatil4672/LearnMate-AI">
         <h3>LearnMate AI</h3>
-        <p>An AI-powered learning assistant that helps students study more effectively.</p>
-        <div class="tags"><span>AI</span><span>Education</span></div>
-        <a href="https://github.com/KartikPatil4672/LearnMate-AI">View on GitHub</a>
-      </article>
-      <article class="glass card proj tilt">
+        <div class="d"><p>An adaptive learning agent that generates practice questions and tracks each student’s mastery.</p><div class="tags"><span>React</span><span>FastAPI</span><span>Gemini</span><span>Firebase</span></div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="row" href="https://github.com/KartikPatil4672/Multilingual_Language_Model">
         <h3>Multilingual Language Model</h3>
-        <p>A language model project that works across multiple languages.</p>
-        <div class="tags"><span>NLP</span><span>Language model</span></div>
-        <a href="https://github.com/KartikPatil4672/Multilingual_Language_Model">View on GitHub</a>
-      </article>
+        <div class="d"><p>A voice and language assistant that works across 97 languages.</p><div class="tags"><span>NLP</span><span>Whisper</span><span>Streamlit</span></div></div>
+        <span class="go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
     </div>
   </section>
 
   <section id="contact" class="wrap block">
-    <div class="glass cta rv">
-      <h2>Let's talk</h2>
+    <div class="cta">
+      <h2>Let’s build something</h2>
       <p>Open to questions, project ideas and collaboration. Call or email me and I will get back to you.</p>
       <div class="btns">
-        <a class="btn primary" href="tel:+919767861955">Call +91 97678 61955</a>
-        <a class="btn" href="mailto:kartik212007@gmail.com">kartik212007@gmail.com</a>
+        <a class="btn dark" href="mailto:kartik212007@gmail.com">kartik212007@gmail.com</a>
+        <a class="btn" href="tel:+919767861955">Call +91 97678 61955</a>
         <a class="btn" href="https://github.com/KartikPatil4672">GitHub profile</a>
       </div>
     </div>
@@ -288,51 +240,30 @@ footer{margin:84px auto 24px;max-width:1080px;width:calc(100% - 24px)}
 </main>
 
 <footer>
-  <div class="glass foot"><span>&copy; 2026 Kartik Patil. All rights reserved.</span><span>Hosted on GitHub Pages over HTTPS</span></div>
+  <div class="wrap foot"><span>&copy; 2026 Kartik Patil. All rights reserved.</span><span>Hosted on GitHub Pages over HTTPS</span></div>
 </footer>
 
 <script>
 (function(){
 var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
 var root=document.documentElement;root.classList.add('js');
-var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* theme */
-var tb=$('#theme'),tt=$('#tip-theme');
-function setTheme(t){root.dataset.theme=t;var l='Switch to '+(t==='dark'?'light':'dark')+' theme';tb.setAttribute('aria-label',l);tt.textContent=l}
+var tb=$('#theme');
+function setTheme(t){root.dataset.theme=t;tb.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' theme')}
 tb.onclick=function(){var t=root.dataset.theme==='dark'?'light':'dark';setTheme(t);try{localStorage.setItem('theme',t)}catch(e){}};
 setTheme(root.dataset.theme||'dark');
 
-/* mobile menu */
-var nav=$('#nav'),bg=$('#burger'),bt=$('#tip-menu');
-function menu(open){nav.classList.toggle('open',open);bg.setAttribute('aria-expanded',open);var l=open?'Close menu':'Open menu';bg.setAttribute('aria-label',l);bt.textContent=l}
-bg.onclick=function(){menu(!nav.classList.contains('open'))};
-$$('#menu a').forEach(function(a){a.onclick=function(){menu(false)}});
-addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){menu(false);bg.focus()}});
-
-/* progress + scrollspy */
-var bar=$('#bar');
-addEventListener('scroll',function(){var h=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')'},{passive:true});
-var links=$$('#menu a');
+/* active nav link */
+var links=$$('.links a[href^="#"]:not(.pill)');
 var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-40% 0px -55% 0px'});
 $$('main section[id]').forEach(function(s){spy.observe(s)});
 
-/* reveal */
-var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{threshold:.1});
-$$('.rv').forEach(function(el){rv.observe(el)});
-
-/* typing */
-var roles=['AI & Data Science student','Machine learning and NLP learner','Builder of AI projects'],t=$('#type'),ri=0,cj=0,del=false;
-function tick(){var s=roles[ri],d=del?35:70;cj+=del?-1:1;t.textContent=s.slice(0,cj);
- if(!del&&cj===s.length){del=true;d=1500}else if(del&&cj===0){del=false;ri=(ri+1)%roles.length;d=350}
- setTimeout(tick,d)}
-if(rm)t.textContent=roles[0];else tick();
-
-/* project card tilt */
-if(!rm)$$('.tilt').forEach(function(c){
- c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
-  c.style.transform='perspective(900px) rotateX('+((.5-py)*5)+'deg) rotateY('+((px-.5)*5)+'deg) translateY(-3px)'});
- c.addEventListener('mouseleave',function(){c.style.transform=''})});
+/* Grad-CAM style heatmap that follows the pointer */
+var cam=$('#cam');
+function move(e){var r=cam.getBoundingClientRect();cam.style.setProperty('--x',((e.clientX-r.left)/r.width*100)+'%');cam.style.setProperty('--y',((e.clientY-r.top)/r.height*100)+'%');cam.classList.add('on')}
+cam.addEventListener('pointermove',move);
+cam.addEventListener('pointerleave',function(){cam.classList.remove('on')});
 })();
 </script>
 </body>
